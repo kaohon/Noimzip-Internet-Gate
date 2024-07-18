@@ -130,7 +130,32 @@ body {
 #sublime-text::before,
 #sublime-merge::before {
   z-index: -1; /* Move the pseudo-elements behind the text */
-  animation: expand-width 1.25s ease forwards; /* Apply animation */
+  animation: expand-width 1.75s ease forwards; /* Apply animation */
+}
+
+#main-search {
+ 	color: #fff;
+ 	background-color: rgba(0, 0, 0, 0.3);
+ 	margin-left: 360px;
+ 	margin-top: 100px;
+ 	height: 35px;
+ 	width: 1200px;
+ 	border-radius: 5px;
+ 	border: 2px solid #fff;
+ 	font-size: 16px;
+ 	display: flex;
+	justify-content: center;
+  animation: expand-width-search 1.75s ease forwards; /* Apply animation */
+}
+
+#main-search-button {
+	background-color: rgba(0, 0, 0, 0.0);
+	border: 0px solid #fff; 
+	height: 35px; 
+	width: 120px; 
+	border-radius: 5px; 
+	color: #fff; 
+	font-size: 20px;
 }
 
 @keyframes expand-width {
@@ -139,6 +164,40 @@ body {
   }
   100% {
     width: 100%;
+  }
+}
+
+@keyframes expand-width-search {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 1200px;
+  }
+}
+
+#world-hacking {
+	height: 35%;
+	width: 35%;
+}
+
+#scan {
+	position: absolute;
+	top: 50px;
+	height: 410px;
+	width: 5px;
+	background-color: #00ff00;
+	animation-iteration-count: infinite;
+	animation-name: expand-left;
+  animation-duration: 7.5s;
+  animation-timing-function: linear;
+}
+
+@keyframes expand-left {
+  0% {
+  }
+  100% {
+    margin-left: 800px;
   }
 }
 
@@ -179,13 +238,13 @@ body {
 	color: #fff;
 }
 
-#eaten-contents {
+#memo-contents {
 	display: none;
 	color: #fff;
 
 }
 
-#ezos-contents {
+#audio-contents {
 	display: none;
 	color: #fff;
 }

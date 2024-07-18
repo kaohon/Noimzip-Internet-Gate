@@ -11,14 +11,25 @@
 <body>
 	<canvas id="c" style="width: 100%; height: 100%; z-index: -10; position: absolute;"></canvas>
 	<section class="tabs-container">
-		<main class="top-tab" id="home-tab">Home</main>
-		<main class="top-tab" id="eaten-tab">Memo</main>
-		<main class="top-tab" id="ezos-tab">EZOS</main>
+		<main class="top-tab" id="search-tab">Search</main>
+        <main class="top-tab" id="weather-tab">Weather</main>
+		<main class="top-tab" id="memo-tab">Memo</main>
+		<main class="top-tab" id="audio-tab">Audio</main>
 		<main class="top-tab" id="profile-tab">Profile</main>
 	</section>
 
-	<section id="home-contents">
+	<section id="search-contents">
 		<span class="header-contents">Noimzip Internet Gate</span>
+            <form method='get' action='https://www.google.com/search?' target='_blank'>
+            <div style='border:none; text-align:center;'>
+                <input type="search" name='q' id="main-search" value='' placeholder='Google で検索'>
+                    <div style='margin-top:10px;'>
+                        <span class="top-tab"><input type='submit' id="main-search-button" value='Search'></span>
+                        <input type='hidden' name='sites' value=''><input type='hidden' name='kl' value='jp-jp'>
+                    </div>
+                </div>
+            </div>
+        </form>
 		<section class="tabs-container">
 			<a class="secondary-button" href="https://www.youtube.com/">Youtube</a>
 			<a class="secondary-button" href="https://x.com/home">Twitter</a>
@@ -35,7 +46,7 @@
 		</section>
 	</section>
 
-	<section id="eaten-contents">
+	<section id="memo-contents">
 		<textarea style="background-color: rgba(0, 0, 0, 0.5); color: #fff; width: 930px; height: 450px;"></textarea>
 		<canvas id="paintCanvas" style="position: absolute; border: solid 2px #fff; background-color: rgba(255, 255, 255, 0.5); right: 0;" width="930" height="450"></canvas>
 		<button id="clearButton" style="position: absolute;">Clear Canvas</button>
@@ -69,7 +80,7 @@
     <br>
 	</section>
 
-	<section id="ezos-contents">
+	<section id="audio-contents">
 <style>
     .music-player {
         width: 300px;
@@ -114,7 +125,13 @@
 	</section>
 
 	<section id="profile-contents">
-	</section>
+        <div id="world-hacking">
+            <img src="img/world-green.png" style="background-color: rgba(0, 0, 0, 0.5); border: 2px solid #00ff00;color: #fff; font-size: 14px;">
+	        <span id="scan"></span>
+        </div>
+        <textarea style="background-color: rgba(0, 0, 0, 0.5); color: #fff; width: 795px; height: 450px;"></textarea>
+
+    </section>
 
 	<script src="script.js"></script>
 </body>
